@@ -1,24 +1,72 @@
-# 🇮🇹 Renewable Power Plants Extraction (Italy)
+# 🌍 European Renewable Power Plants Dashboard
 
-This repository contains a simple Python script to extract wind and solar power plant data for Italy using the Resource Watch API.
+ **Live App**: https://resource-watch-renewables-italy-fjbntln3ky9zrct8j7uqzz.streamlit.app/
 
-## 📌 Overview
+An interactive web application to explore renewable power plants across Europe, built using real-world geospatial data and deployed with Streamlit.
 
-The script:
-- Defines a geographic area (Italy) using GeoJSON
-- Creates a geostore via the Resource Watch API
-- Queries the Global Power Plant Database
-- Exports the results to a CSV file
+This project combines **data engineering, API integration, and interactive visualization**, with a focus on applications in energy markets.
+
+---
+
+## What you can do
+
+- Explore renewable power plants across Europe
+- Filter data by:
+  - Country
+  - Energy source (wind, solar, etc.)
+- Visualize plants on an interactive map
+- Analyze installed capacity distribution
+
+---
+
+##  Why this matters
+
+Renewable generation is increasingly driving price dynamics in European electricity markets.
+
+Understanding:
+- where assets are located  
+- how capacity is distributed  
+- which technologies dominate  
+
+is critical for:
+- energy trading
+- price forecasting
+- market analysis
+
+---
 
 ## Data Source
 
-- Resource Watch API  
-- Dataset: Global Power Plant Database  
-- https://resourcewatch.org/
+Data is retrieved via the **Resource Watch API**, providing access to global environmental datasets.
 
-## Requirements
+The dataset includes:
+- Latitude & Longitude
+- Plant type
+- Installed capacity
+- Country
 
-- Python 3.x
-- Required libraries:
-  ```bash
-  pip install requests pandas
+---
+
+## Architecture
+
+- Data stored on **AWS S3**
+- Secure access via environment variables
+- Loaded dynamically into the app
+- Processed with **Pandas**
+- Visualized with **Plotly**
+- Served via **Streamlit**
+
+---
+
+## Tech Stack
+
+- Python
+- Pandas
+- Streamlit
+- Plotly
+- AWS S3
+
+---
+```bash
+AWS_ACCESS_KEY_ID=your_key
+AWS_SECRET_ACCESS_KEY=your_secret
