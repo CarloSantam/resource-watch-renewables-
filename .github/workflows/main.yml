@@ -3,7 +3,7 @@ name: Run Python Script
 on:
   schedule:
     - cron: '0 6 * * *'  # every day at 06:00 UTC
-  workflow_dispatch:      # allows manual run
+  workflow_dispatch:
 
 jobs:
   run:
@@ -23,5 +23,10 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run script
+        env:
+          JWT: ${{ secrets.JWT }}  # JWT token
+          API_RESOURCE_WATCH: ${{ secrets.API_RESOURCE_WATCH }}  # API key
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}  # AWS access key
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}  # AWS secret key
         run: |
           python Download_Data.py
