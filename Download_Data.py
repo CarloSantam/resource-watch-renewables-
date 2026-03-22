@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Mar 21 11:02:15 2026
-
-@author: Admin
-"""
-
 import os
 import requests
 import pandas as pd
@@ -98,7 +91,6 @@ def fetch_data(country):
      
     print(f"Number of plants found: {len(df)}")
           
-    print(f"Data saved to: {OUTPUT_FILE}")
     print(df.head())
     
     return df
