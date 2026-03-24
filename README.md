@@ -68,4 +68,5 @@ The dataset includes:
 
 ## Future plans
 
-- To integrate and compare the current results with other sources as well 
+- To integrate and compare the current results with other sources as well
+- Add Weather Data
